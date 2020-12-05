@@ -1,0 +1,71 @@
+.Root {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.Leaf {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    background-color: grey;
+}
+  
+.Leaf:hover {
+    background-color: lightgrey;
+}
+  
+.Branch {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+.BranchContent {
+    width: fit-content;
+    background-color: darkkhaki;
+}
+
+.BranchContent:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+li {
+    padding-left: 10px;
+}
+/*    
+.Branch::before {
+    content: ">";
+    margin-right: 2px;
+    padding:2px;
+    background-color: black;
+    color:white;
+}
+*/
+.Branch-Down {
+    /*background-color: darkkhaki;*/
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+/*
+.Branch-Down::before {
+    content: "v";
+    margin-right: 2px;
+    padding:2px;
+    background-color: black;
+    color:white;
+}
+*/  
+/* Hide the nested list */
+.Nested {
+    display: none;
+}
+    
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.Active {
+    display: block;
+}
+    
