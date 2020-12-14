@@ -39,9 +39,22 @@ var TreeViewCreator = {
                 root.open();
             }
         };
+        root.set_selection = function(newSelection) {
+            root.selection = newSelection;
+        };
+        root.show_selection = function(xPos, yPos) {
+            if(this.selection == undefined) {
+                return;
+            }
+            //Later selection know who summon it.
+            this.selection.summoner = this;
+            //Set position of panel;
+
+            //Panel show
+        };
         root.set_click = function(aFunction, parameter) {
-            content.click(function() {
-                aFunction(parameter);
+            content.click(function(event, ) {
+                aFunction(event, parameter);
             });
         };
         root.remove_all_branches = function() {
@@ -57,5 +70,35 @@ var TreeViewCreator = {
             //console.log(allChildren);
         };
         return root;
+    }
+};
+
+var ComponentCreator = {
+    create_select_panel : function(label) {
+        var panel = $('<ul />', {class:"SelectPanel"});
+        //panel.text(label);
+        panel.show_at_position = function(leftPos, topPos) {
+            this.css({top:leftPos, left:topPos, display:"block"});
+        };
+        panel.hide = function() {
+            this.css({display:"none"});
+        };
+        panel.add_option = function(label, aFunction, aParameter) {
+            var item = $('<li />', {class:"SelectOption"});
+            item.text(label);
+            item.data("parent", this);
+            if(aFunction != undefined) {
+                item.click(function(){
+                    aFunction(aParameter);
+                });
+            }
+            this.append(item);
+        };
+        panel.add_separator = function() {
+            var item = $('<li />', {class:"SelectSeparator"});
+            item.append('<hr />');
+            this.append(item);
+        }
+        return panel;
     }
 };

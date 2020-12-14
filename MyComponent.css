@@ -1,0 +1,111 @@
+.SelectPanel {
+    display: none;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aa8866;
+    background-color:#ffeecc;
+    text-align:center;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.SelectOption:hover {
+    background-color: #807060;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.SelectSeparator {
+    height: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.Root {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.Leaf {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    /*background-color: grey;*/
+}
+  
+.Leaf:hover {
+    background-color: lightgrey;
+}
+  
+.Branch {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+.BranchContent {
+    width: fit-content;
+}
+
+.BranchContent:hover {
+    background-color: lightgrey;
+}
+
+.FullWidth {
+    width: 100%;
+}
+
+.Z50 {
+    z-index: 50;
+}
+
+.Z100 {
+    z-index: 100;
+}
+
+.DisableCurtain {
+    background-color: gray;
+    opacity: 0.5;
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display:none;
+}
+
+ul {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+li {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.Centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.Branch-Down {
+    /*background-color: darkkhaki;*/
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Hide the nested list */
+.Nested {
+    display: none;
+}
+    
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.Active {
+    display: block;
+}
+    
