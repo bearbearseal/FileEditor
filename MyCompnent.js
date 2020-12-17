@@ -76,7 +76,7 @@ var TreeViewCreator = {
 var ComponentCreator = {
     create_select_panel : function(label) {
         var panel = $('<ul />', {class:"SelectPanel"});
-        //panel.text(label);
+        panel.text(label);
         panel.show_at_position = function(leftPos, topPos) {
             this.css({top:leftPos, left:topPos, display:"block"});
         };

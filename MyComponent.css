@@ -64,6 +64,12 @@
     z-index: 100;
 }
 
+.RelativeHorizontalCentered {
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .DisableCurtain {
     background-color: gray;
     opacity: 0.5;
