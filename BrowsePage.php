@@ -369,7 +369,7 @@
                 add_file : function(theFolder) {
                     var postData = {};
                     postData.Command = "CreateFile";
-                    postData.Name = $(theFolder).data("Name") + "/NewFile";
+                    //postData.Name = $(theFolder).data("Name") + "/NewFile";
                     $.ajax({
                         type: "POST",
                         url: "BrowsePageBackend.php",
